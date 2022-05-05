@@ -30,5 +30,7 @@ mod tests {
         assert_eq!(compute_books_cost(books), 8.0 * 3.0 * 0.9 + 8.0 * 1.0);
         let books = vec![0, 1, 1, 2, 2, 3, 3, 4];
         assert_eq!(compute_books_cost(books), 8.0 * 4.0 * 0.8 + 8.0 * 4.0 * 0.8);
+        let books = vec![0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
+        assert_eq!(compute_books_cost(books), 8.0 * 5.0 * 0.75 * 3.0 + 8.0 * 4.0 * 0.8 * 2.0);
     }
 }

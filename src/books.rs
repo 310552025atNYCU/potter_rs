@@ -21,6 +21,7 @@ pub fn compute_books_cost(books: Vec<i32>) -> f32 {
 
         let n = cnt.len() as f32;
         let min_count = *cnt.iter().min().unwrap();
+        let min_count = min_count.min(1);
         let discount_factor = 1.0 - discount_map(cnt.len());
         total_cost += n * 8.0 * discount_factor * min_count as f32;
         cnt.iter_mut().for_each(|num| *num -= min_count);
